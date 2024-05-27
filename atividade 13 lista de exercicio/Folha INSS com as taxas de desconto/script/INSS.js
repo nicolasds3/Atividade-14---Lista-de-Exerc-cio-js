@@ -2,20 +2,18 @@ function resultado() {
 
     var nome = document.getElementById('nome').value;
     var salario = document.getElementById('salario').value;
+    var INSS;
 
-    function descontos() {
         if (salario < 1000.01) {
-           INSS = salario * 0.08
+           INSS = (salario * 0.08)
        } 
         if (1000.02 < salario < 1500) {
-           INSS = salario * 0.085
+           INSS = (salario * 0.085)
        } 
         if (salario > 1500.01) {
-           INSS = salario * 0.09
+           INSS = (salario * 0.09)
        }
-   }
-
-    var INSS = descontos();
+   
     var salarioL = (salario - INSS);
 
     alert("Seu nome de funcionário é:");
